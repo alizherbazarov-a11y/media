@@ -1,3 +1,38 @@
+const products = [
+{
+title:"Nairo Series®",
+category:"Featured",
+img:"./second.png"
+},
+{
+title:"Kensho Series®",
+category:"New",
+img:"./third.png"
+},
+{
+title:"Atarashi Series®",
+category:"Handmade",
+img:"./four.png"
+}
+];
+
+const container = document.getElementById("productContainer");
+
+products.forEach(product=>{
+const card=document.createElement("div");
+card.classList.add("product-card");
+
+card.innerHTML=`
+<img src="${product.img}">
+<p>${product.category}</p>
+<h3>${product.title}</h3>
+`;
+
+container.appendChild(card);
+});
+
+
+
 
 (() => {
 	const target = new Date('February 20, 2026 14:45:45');
